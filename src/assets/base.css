@@ -1,0 +1,19 @@
+/* color palette from <https://github.com/vuejs/theme> */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto&display=swap");
+:root {
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(23, 28, 43);
+}

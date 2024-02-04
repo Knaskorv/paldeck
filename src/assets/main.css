@@ -1,0 +1,6 @@
+@import "./base.css";
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
