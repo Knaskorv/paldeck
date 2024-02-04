@@ -61,8 +61,8 @@ export function createBreedingLines(deck: Pal[]) {
   let i = 0;
   while (run && i < 100) {
     i++;
-    const missingPals = currentDeck.filter((p) => !p.m && !p.f);
-    const genderIncompletePals = currentDeck.filter((p) => p.m !== p.f);
+    const missingPals = currentDeck.filter((p: any) => !p.m && !p.f);
+    const genderIncompletePals = currentDeck.filter((p: any) => p.m !== p.f);
 
     const genderComplete = reduceWithMatches(genderIncompletePals, currentDeck);
     const newPals = reduceWithMatches(missingPals, currentDeck);
