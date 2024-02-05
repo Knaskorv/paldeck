@@ -36,20 +36,20 @@ defineProps(["pal"]);
 
   gap: 0.5rem;
   border: solid rgba(0, 0, 0, 0.3) 1px;
+  /* background-color: rgb(110, 110, 110); */
   background: rgba(255, 255, 255, 0.4);
   border-radius: 4px;
   align-items: center;
   height: 50px;
 }
 
-.pal-card.full {
-  background: rgba(255, 255, 255, 1);
-}
+.pal-card.full,
 .pal-card.partial {
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgb(240, 240, 240);
 }
+
 .pal-card.breedable {
-  background: rgba(255, 241, 177, 0.7);
+  background-color: rgb(255, 236, 179);
 }
 
 .pal-info {
@@ -57,11 +57,12 @@ defineProps(["pal"]);
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 .gender-container {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 
 .pal-avatar {

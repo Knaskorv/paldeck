@@ -1,4 +1,5 @@
 import type { Pal } from "@/composables/usePalDeck";
+import { palData } from "@/data/data";
 
 function hasGenderMatch(palId1: number, palId2: number, deck: Pal[]) {
   const pal1 = deck.find((p) => p.id === palId1);
@@ -52,7 +53,7 @@ function reduceWithMatches(targets: Pal[], deck: Pal[]) {
 }
 
 export function createBreedingLines(deck: Pal[]) {
-  console.time("Calculating...");
+  // console.time("Calculating...");
   let run = true;
   let currentDeck = JSON.parse(JSON.stringify(deck));
 
@@ -81,6 +82,45 @@ export function createBreedingLines(deck: Pal[]) {
       });
     }
   }
-  console.timeEnd("Calculating...");
+  // console.timeEnd("Calculating...");
   return lines;
+}
+
+function getClosestPal(breedingPower: number) {
+  const { match } = palData
+    .filter((d) => !d.specialCombo.length)
+    .reduce(
+      (acc: any, curr) => {
+        const diff = Math.abs(curr.breedingPower - breedingPower);
+        if (diff < acc.diff || (diff === acc.diff && curr.order < acc.order)) {
+          acc.diff = diff;
+          acc.match = curr;
+          acc.order = curr.order;
+        }
+        return acc;
+      },
+      { diff: Infinity, order: Infinity, match: null }
+    );
+
+  return match;
+}
+
+export function breed(parent1id: number, parent2id: number) {
+  // @ts-ignore
+  const combo = palData.find((p) => [parent1id, parent2id].every((id) => p.specialCombo.includes(id)));
+  if (combo) return combo;
+
+  const p1 = palData.find((p) => p.id === parent1id);
+  const p2 = palData.find((p) => p.id === parent2id);
+
+  if (!p1 || !p2) return null;
+
+  const bp1 = p1.breedingPower;
+  const bp2 = p2.breedingPower;
+
+  const cbp = Math.floor((bp1 + bp2 + 1) / 2);
+
+  const match = getClosestPal(cbp);
+
+  return match;
 }

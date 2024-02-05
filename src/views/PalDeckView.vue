@@ -1,5 +1,5 @@
 <template>
-  <div class="pal-deck-view">
+  <div class="pal-deck-view page">
     <PalDeck></PalDeck>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="pal-avatar">
-    <img :src="`/icons/${icon}.webp`" />
+    <img :src="`/paldeck/icons/${icon}.webp`" />
   </div>
 </template>
 

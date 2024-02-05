@@ -21,5 +21,7 @@ import Header from "./components/Header.vue";
 
 main {
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 </style>

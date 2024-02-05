@@ -17,3 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(23, 28, 43);
 }
+
+.page {
+  max-width: 1300px;
+  flex: 1 0 auto;
+}

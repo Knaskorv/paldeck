@@ -49,8 +49,6 @@ const newPals = computed<number[]>(() =>
   }, [])
 );
 
-watch(breedingLines, () => console.log(breedingLines.value));
-
 export const usePalDeck = () => {
   const toggleGender = (palId: number, gender: "m" | "f") => {
     const pal = palDeckInfo.value.find((p) => p.id === palId);

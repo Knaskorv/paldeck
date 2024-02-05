@@ -1,5 +1,5 @@
 <template>
-  <div class="planner">
+  <div class="planner page">
     <BreedLines></BreedLines>
   </div>
 </template>

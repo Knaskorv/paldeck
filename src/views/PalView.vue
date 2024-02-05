@@ -1,6 +1,6 @@
 <template>
   <div v-if="!pal">No pal</div>
-  <div v-else class="pal">
+  <div v-else class="pal page">
     <BreedCombination v-for="line of lines.newPals" :parents="line"></BreedCombination>
   </div>
 </template>

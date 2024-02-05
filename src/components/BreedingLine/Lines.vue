@@ -39,7 +39,7 @@ const target = palDeck.value.find((p) => p.id === props.line.target);
 }
 
 .line:hover {
-  background: rgba(255, 255, 255, 1);
+  background-color: rgb(240, 240, 240);
 }
 
 .combination {

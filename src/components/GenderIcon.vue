@@ -71,10 +71,23 @@ svg {
 }
 
 .gender-icon {
-  opacity: 0.5;
   cursor: pointer;
+  /* background-color: rgb(110, 110, 110); */
+  background: rgb(116, 119, 128);
+  padding: 0.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+
 .gender-icon.active {
-  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+}
+
+.gender-icon:hover {
+  background: white;
 }
 </style>
