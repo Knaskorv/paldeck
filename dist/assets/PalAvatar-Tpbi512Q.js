@@ -1,1 +1,0 @@
-import{d as o,o as e,c as t,b as c,u as n,_ as r}from"./index-63Xwq6-f.js";const p={class:"pal-avatar"},_=["src"],l=o({__name:"PalAvatar",props:["pal"],setup(a){const s=a.pal.name.split(" ").join("_").toLowerCase();return(d,m)=>(e(),t("div",p,[c("img",{src:`/icons/${n(s)}.webp`},null,8,_)]))}}),f=r(l,[["__scopeId","data-v-4455d455"]]);export{f as P};
