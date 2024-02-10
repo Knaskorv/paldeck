@@ -7,9 +7,9 @@
       breedable: newPals.includes(pal.id),
     }"
   >
-    <div class="pal-avatar">
+    <router-link tag="div" :to="`/pal/${pal?.id}`" class="pal-avatar">
       <PalAvatar :pal="pal"></PalAvatar>
-    </div>
+    </router-link>
     <div class="pal-info">
       <div>{{ pal.name }}</div>
       <div class="gender-container">

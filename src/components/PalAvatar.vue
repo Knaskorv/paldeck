@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 const props = defineProps(["pal"]);
-const icon = props.pal.name.split(" ").join("_").toLowerCase();
+const icon = props.pal?.name.split(" ").join("_").toLowerCase();
 </script>
 
 <style scoped>

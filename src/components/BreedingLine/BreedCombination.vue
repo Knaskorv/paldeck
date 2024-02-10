@@ -27,7 +27,6 @@ const parent2 = palDeck.value.find((p) => p.id === props.parents[1]);
   background: rgba(255, 255, 255, 0.4);
   display: flex;
   height: 56px;
-  color: white;
   gap: 0.5rem;
   font-size: 0.8rem;
   align-items: center;

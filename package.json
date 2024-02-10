@@ -9,9 +9,11 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "gh-deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+    "add-404": "ncp dist/index.html dist/404.html",
+    "gh-deploy": "npm run build && npm run add-404 && git add dist && git commit -m 'build' && git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "ncp": "^2.0.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
